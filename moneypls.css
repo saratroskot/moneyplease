@@ -209,13 +209,17 @@ main {
   }
   
 
-.shop-now-btn {
+  .shop-now-btn {
     background-color: #000;
     color: white;
     border: none;
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
 }
 
 .shop-now-btn2 {
@@ -225,6 +229,10 @@ main {
     padding: 10px 20px;
     cursor: pointer;
     transition: background-color 0.3s;
+    text-align: center;
+    display: block;
+    margin: 10px auto;
+    width: fit-content;
 }
 
 .shop-now-btn:hover {
@@ -254,7 +262,8 @@ main {
 }
 
 .product-card {
-    width: 300px;
+    width: 100%;
+    max-width: 320px;
     background: #fff;
     padding: 15px;
     border-radius: 10px;
@@ -411,7 +420,6 @@ footer {
     }
   }
 
-  /* Mobilna prilagodba */
 @media (max-width: 768px) {
     .header-container {
         flex-direction: column;
@@ -448,16 +456,24 @@ footer {
         font-size: 32px;
     }
 
-    @media (max-width: 768px) {
-        .product-card {
-            width: 90%;
-            max-width: 350px;
-        }
+    .product-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 0 20px;
+    }
     
-        .product-container {
-            flex-direction: column;
-            align-items: center;
-        }
+    .product-card {
+        flex: 1 1 280px;
+        max-width: 320px;
+        background: #fff;
+        padding: 15px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease-in-out;
+        position: relative;
+        cursor: pointer;
     }
     
     iframe {
@@ -489,3 +505,12 @@ footer {
         margin-top: 20px;
     }
 }
+    .shop-now-btn,
+    .shop-now-btn2 {
+      width: 100%;
+      max-width: 300px;
+      font-size: 18px;
+    }
+
+  
+  
