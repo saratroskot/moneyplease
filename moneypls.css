@@ -448,15 +448,18 @@ footer {
         font-size: 32px;
     }
 
-    .product-container {
-        flex-direction: column;
-        align-items: center;
+    @media (max-width: 768px) {
+        .product-card {
+            width: 90%;
+            max-width: 350px;
+        }
+    
+        .product-container {
+            flex-direction: column;
+            align-items: center;
+        }
     }
-
-    .product-card {
-        width: 90%;
-    }
-
+    
     iframe {
         width: 100% !important;
         height: 400px;
